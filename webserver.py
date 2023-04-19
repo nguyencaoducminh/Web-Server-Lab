@@ -11,7 +11,7 @@ serverSocket.listen(1)
 while True:
  #Establish the connection
     print('Ready to serve...')
-    connectionSocket, addr = #Fill in start #Fill in end
+    connectionSocket, addr = serverSocket.accept()
     try:
         message = connectionSocket.recv(1024).decode()
         filename = message.split()[1]
